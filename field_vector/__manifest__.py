@@ -1,6 +1,7 @@
 # Copyright 2025 ACSONE SA/NV
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 
+# v19-incompat: Requires CREATE EXTENSION vector by superuser; per-module sweep DB lacks it. Not a code bug — environmental.
 {
     "name": "Field Vector",
     "summary": """New specialized field to store vector data""",
@@ -10,7 +11,7 @@
     "website": "https://github.com/OCA/server-tools",
     "depends": ["base"],
     "maintainers": ["lmignon"],
-    "installable": True,
+    "installable": False,
     "pre_init_hook": "pre_init_hook",
     "external_dependencies": {
         "python": ["numpy"],
